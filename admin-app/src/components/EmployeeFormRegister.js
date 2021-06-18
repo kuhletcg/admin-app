@@ -12,36 +12,41 @@ const EmployeeForm = () => {
           type="text"
           name="name"
           onChange={handleChange}
-          placeholder="Enter employee name"
+          placeholder="name"
           value={formInfo.name}
+          required
         />
         <input
           type="text"
           name="surname"
           onChange={handleChange}
-          placeholder="Enter employee surname"
+          placeholder=" surname"
           value={formInfo.surname}
+          required
         />
         <input
           type="text"
           name="idNumber"
           onChange={handleChange}
-          placeholder="Enter employee ID number"
+          placeholder="ID number"
           value={formInfo.idNumber}
+          required
         />
         <input
           type="number"
           name="position"
           onChange={handleChange}
-          placeholder="Enter employee job position"
+          placeholder="job position"
           value={formInfo.position}
+          required
         />
         <input
           type="number"
           name="salary"
           onChange={handleChange}
-          placeholder="Enter employee salary"
+          placeholder="employee salary"
           value={formInfo.salary}
+          required
         />
         <button type="submit">Submit</button>
       </form>
