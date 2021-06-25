@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import EmployeeFormRegister from "./components/EmployeeFormRegister";
+import DisplayEmployees from "./components/DisplayEmployees";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Admin register</h1>
+      <Router>
+        <NavBar />
+        <Switch>
+          <Route path="/" exact component={EmployeeFormRegister} />
+          <Route path="/displayEmployees" component={DisplayEmployees} />
+        </Switch>
+      </Router>
+      <EmployeeFormRegister />
     </div>
   );
 }

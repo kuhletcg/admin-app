@@ -20,7 +20,7 @@ const EmployeeForm = () => {
           type="text"
           name="surname"
           onChange={handleChange}
-          placeholder=" surname"
+          placeholder="surname"
           value={formInfo.surname}
           required
         />

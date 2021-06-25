@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { addEmployee } from "../redux/actions/employee";
-
-const useForm = () => {
+const useForm = (validate) => {
   const [formInfo, setFormInfo] = useState({
     name: "",
     surname: "",
@@ -23,10 +22,10 @@ const useForm = () => {
   };
 
   useEffect(() => {
-    if (Object.keys(error).length === 0) {
+    if (Object.keys(errors).length === 0) {
       dispatch(addEmployee(formInfo));
     }
-  }, [error]);
+  }, [errors]);
   return { formInfo, errors, handleChange, handleSubmit };
 };
 
