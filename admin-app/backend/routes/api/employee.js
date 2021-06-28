@@ -1,4 +1,4 @@
-const Employee = require("../../model/employee");
+const Employee = require("../../models/employee");
 
 const employeeRoutes = (app) => {
   app.get("/employee", async (req, res) => {
