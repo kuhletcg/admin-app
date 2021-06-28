@@ -13,4 +13,4 @@ mongoose.connect(process.env.MONGO_URI, {
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 employeeRoutes(app);
-app.listen(5050, () => console.log(`Server is running on port 5000...`));
+app.listen(5000, () => console.log(`Server is running on port 5000...`));
